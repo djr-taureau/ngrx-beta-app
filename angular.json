@@ -3,34 +3,34 @@
   "version": 1,
   "newProjectRoot": "",
   "projects": {
-    "ngrx-workshop-app": {
+    "ngrx-beta-app": {
       "projectType": "application",
       "schematics": {},
-      "root": "apps/ngrx-workshop-app",
-      "sourceRoot": "apps/ngrx-workshop-app/src",
-      "prefix": "ngrx-workshop-app",
+      "root": "apps/ngrx-beta-app",
+      "sourceRoot": "apps/ngrx-beta-app/src",
+      "prefix": "ngrx-beta-app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/apps/ngrx-workshop-app",
-            "index": "apps/ngrx-workshop-app/src/index.html",
-            "main": "apps/ngrx-workshop-app/src/main.ts",
-            "polyfills": "apps/ngrx-workshop-app/src/polyfills.ts",
-            "tsConfig": "apps/ngrx-workshop-app/tsconfig.app.json",
+            "outputPath": "dist/apps/ngrx-beta-app",
+            "index": "apps/ngrx-beta-app/src/index.html",
+            "main": "apps/ngrx-beta-app/src/main.ts",
+            "polyfills": "apps/ngrx-beta-app/src/polyfills.ts",
+            "tsConfig": "apps/ngrx-beta-app/tsconfig.app.json",
             "assets": [
-              "apps/ngrx-workshop-app/src/favicon.ico",
-              "apps/ngrx-workshop-app/src/assets"
+              "apps/ngrx-beta-app/src/favicon.ico",
+              "apps/ngrx-beta-app/src/assets"
             ],
-            "styles": ["apps/ngrx-workshop-app/src/styles.css"],
+            "styles": ["apps/ngrx-beta-app/src/styles.css"],
             "scripts": []
           },
           "configurations": {
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "apps/ngrx-workshop-app/src/environments/environment.ts",
-                  "with": "apps/ngrx-workshop-app/src/environments/environment.prod.ts"
+                  "replace": "apps/ngrx-beta-app/src/environments/environment.ts",
+                  "with": "apps/ngrx-beta-app/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -59,12 +59,12 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ngrx-workshop-app:build",
-            "proxyConfig": "apps/ngrx-workshop-app/proxy.conf.json"
+            "browserTarget": "ngrx-beta-app:build",
+            // "proxyConfig": "apps/ngrx-beta-app/proxy.conf.json"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ngrx-workshop-app:build:production"
+              "browserTarget": "ngrx-beta-app:build:production"
             }
           }
         },
@@ -73,7 +73,7 @@
           "options": {
             "targets": [
               {
-                "target": "ngrx-workshop-app:serve"
+                "target": "ngrx-beta-app:serve"
               },
               {
                 "target": "api:serve"
@@ -84,52 +84,52 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ngrx-workshop-app:build"
+            "browserTarget": "ngrx-beta-app:build"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "apps/ngrx-workshop-app/tsconfig.app.json",
-              "apps/ngrx-workshop-app/tsconfig.spec.json"
+              "apps/ngrx-beta-app/tsconfig.app.json",
+              "apps/ngrx-beta-app/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/ngrx-workshop-app/**"]
+            "exclude": ["**/node_modules/**", "!apps/ngrx-beta-app/**"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "apps/ngrx-workshop-app/jest.config.js",
-            "tsConfig": "apps/ngrx-workshop-app/tsconfig.spec.json",
-            "setupFile": "apps/ngrx-workshop-app/src/test-setup.ts"
+            "jestConfig": "apps/ngrx-beta-app/jest.config.js",
+            "tsConfig": "apps/ngrx-beta-app/tsconfig.spec.json",
+            "setupFile": "apps/ngrx-beta-app/src/test-setup.ts"
           }
         }
       }
     },
-    "ngrx-workshop-app-e2e": {
-      "root": "apps/ngrx-workshop-app-e2e",
-      "sourceRoot": "apps/ngrx-workshop-app-e2e/src",
+    "ngrx-beta-app-e2e": {
+      "root": "apps/ngrx-beta-app-e2e",
+      "sourceRoot": "apps/ngrx-beta-app-e2e/src",
       "projectType": "application",
       "architect": {
         "e2e": {
           "builder": "@nrwl/cypress:cypress",
           "options": {
-            "cypressConfig": "apps/ngrx-workshop-app-e2e/cypress.json",
-            "tsConfig": "apps/ngrx-workshop-app-e2e/tsconfig.e2e.json",
-            "devServerTarget": "ngrx-workshop-app:serve"
+            "cypressConfig": "apps/ngrx-beta-app-e2e/cypress.json",
+            "tsConfig": "apps/ngrx-beta-app-e2e/tsconfig.e2e.json",
+            "devServerTarget": "ngrx-beta-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ngrx-workshop-app:serve:production"
+              "devServerTarget": "ngrx-beta-app:serve:production"
             }
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": "apps/ngrx-workshop-app-e2e/tsconfig.e2e.json",
-            "exclude": ["**/node_modules/**", "!apps/ngrx-workshop-app-e2e/**"]
+            "tsConfig": "apps/ngrx-beta-app-e2e/tsconfig.e2e.json",
+            "exclude": ["**/node_modules/**", "!apps/ngrx-beta-app-e2e/**"]
           }
         }
       }
@@ -217,7 +217,7 @@
       "projectType": "library",
       "root": "libs/cart-data-access",
       "sourceRoot": "libs/cart-data-access/src",
-      "prefix": "ngrx-workshop-app",
+      "prefix": "ngrx-beta-app",
       "architect": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
@@ -244,7 +244,7 @@
       "projectType": "library",
       "root": "libs/product-data-access",
       "sourceRoot": "libs/product-data-access/src",
-      "prefix": "ngrx-workshop-app",
+      "prefix": "ngrx-beta-app",
       "architect": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
@@ -271,7 +271,7 @@
       "projectType": "library",
       "root": "libs/shipping-data-access",
       "sourceRoot": "libs/shipping-data-access/src",
-      "prefix": "ngrx-workshop-app",
+      "prefix": "ngrx-beta-app",
       "architect": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
@@ -293,6 +293,585 @@
         }
       },
       "schematics": {}
+    },
+    "core": {
+      "root": "libs/core",
+      "sourceRoot": "libs/core/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/core/tsconfig.lib.json",
+              "libs/core/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/core/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/core/jest.config.js",
+            "tsConfig": "libs/core/tsconfig.spec.json"
+          }
+        }
+      }
+    },
+    "common": {
+      "root": "libs/common",
+      "sourceRoot": "libs/common/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/common/tsconfig.lib.json",
+              "libs/common/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/common/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/common/jest.config.js",
+            "tsConfig": "libs/common/tsconfig.spec.json"
+          }
+        }
+      }
+    },
+    "ui-components-buttons": {
+      "projectType": "library",
+      "root": "libs/ui-components/buttons",
+      "sourceRoot": "libs/ui-components/buttons/src",
+      "prefix": "ngrx-beta-app",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-components/buttons/tsconfig.lib.json",
+              "libs/ui-components/buttons/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/ui-components/buttons/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ui-components/buttons/jest.config.js",
+            "tsConfig": "libs/ui-components/buttons/tsconfig.spec.json",
+            "setupFile": "libs/ui-components/buttons/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "ui-components-attachment": {
+      "projectType": "library",
+      "root": "libs/ui-components/attachment",
+      "sourceRoot": "libs/ui-components/attachment/src",
+      "prefix": "ngrx-beta-app",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-components/attachment/tsconfig.lib.json",
+              "libs/ui-components/attachment/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/ui-components/attachment/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ui-components/attachment/jest.config.js",
+            "tsConfig": "libs/ui-components/attachment/tsconfig.spec.json",
+            "setupFile": "libs/ui-components/attachment/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "ui-components-breadcrumb": {
+      "projectType": "library",
+      "root": "libs/ui-components/breadcrumb",
+      "sourceRoot": "libs/ui-components/breadcrumb/src",
+      "prefix": "ngrx-beta-app",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-components/breadcrumb/tsconfig.lib.json",
+              "libs/ui-components/breadcrumb/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/ui-components/breadcrumb/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ui-components/breadcrumb/jest.config.js",
+            "tsConfig": "libs/ui-components/breadcrumb/tsconfig.spec.json",
+            "setupFile": "libs/ui-components/breadcrumb/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "ui-components-core": {
+      "projectType": "library",
+      "root": "libs/ui-components/core",
+      "sourceRoot": "libs/ui-components/core/src",
+      "prefix": "ngrx-beta-app",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-components/core/tsconfig.lib.json",
+              "libs/ui-components/core/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/ui-components/core/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ui-components/core/jest.config.js",
+            "tsConfig": "libs/ui-components/core/tsconfig.spec.json",
+            "setupFile": "libs/ui-components/core/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "ui-components-data-list": {
+      "projectType": "library",
+      "root": "libs/ui-components/data-list",
+      "sourceRoot": "libs/ui-components/data-list/src",
+      "prefix": "ngrx-beta-app",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-components/data-list/tsconfig.lib.json",
+              "libs/ui-components/data-list/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/ui-components/data-list/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ui-components/data-list/jest.config.js",
+            "tsConfig": "libs/ui-components/data-list/tsconfig.spec.json",
+            "setupFile": "libs/ui-components/data-list/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "ui-components-file-upload": {
+      "projectType": "library",
+      "root": "libs/ui-components/file-upload",
+      "sourceRoot": "libs/ui-components/file-upload/src",
+      "prefix": "ngrx-beta-app",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-components/file-upload/tsconfig.lib.json",
+              "libs/ui-components/file-upload/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/ui-components/file-upload/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ui-components/file-upload/jest.config.js",
+            "tsConfig": "libs/ui-components/file-upload/tsconfig.spec.json",
+            "setupFile": "libs/ui-components/file-upload/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "ui-components-icons": {
+      "projectType": "library",
+      "root": "libs/ui-components/icons",
+      "sourceRoot": "libs/ui-components/icons/src",
+      "prefix": "ngrx-beta-app",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-components/icons/tsconfig.lib.json",
+              "libs/ui-components/icons/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/ui-components/icons/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ui-components/icons/jest.config.js",
+            "tsConfig": "libs/ui-components/icons/tsconfig.spec.json",
+            "setupFile": "libs/ui-components/icons/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "ui-components-layouts": {
+      "projectType": "library",
+      "root": "libs/ui-components/layouts",
+      "sourceRoot": "libs/ui-components/layouts/src",
+      "prefix": "ngrx-beta-app",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-components/layouts/tsconfig.lib.json",
+              "libs/ui-components/layouts/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/ui-components/layouts/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ui-components/layouts/jest.config.js",
+            "tsConfig": "libs/ui-components/layouts/tsconfig.spec.json",
+            "setupFile": "libs/ui-components/layouts/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "ui-components-page-layouts": {
+      "projectType": "library",
+      "root": "libs/ui-components/page-layouts",
+      "sourceRoot": "libs/ui-components/page-layouts/src",
+      "prefix": "ngrx-beta-app",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-components/page-layouts/tsconfig.lib.json",
+              "libs/ui-components/page-layouts/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/ui-components/page-layouts/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ui-components/page-layouts/jest.config.js",
+            "tsConfig": "libs/ui-components/page-layouts/tsconfig.spec.json",
+            "setupFile": "libs/ui-components/page-layouts/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "ui-components-page-navigation": {
+      "projectType": "library",
+      "root": "libs/ui-components/page-navigation",
+      "sourceRoot": "libs/ui-components/page-navigation/src",
+      "prefix": "ngrx-beta-app",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-components/page-navigation/tsconfig.lib.json",
+              "libs/ui-components/page-navigation/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/ui-components/page-navigation/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ui-components/page-navigation/jest.config.js",
+            "tsConfig": "libs/ui-components/page-navigation/tsconfig.spec.json",
+            "setupFile": "libs/ui-components/page-navigation/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "ui-components-side-navigation": {
+      "projectType": "library",
+      "root": "libs/ui-components/side-navigation",
+      "sourceRoot": "libs/ui-components/side-navigation/src",
+      "prefix": "ngrx-beta-app",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-components/side-navigation/tsconfig.lib.json",
+              "libs/ui-components/side-navigation/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/ui-components/side-navigation/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ui-components/side-navigation/jest.config.js",
+            "tsConfig": "libs/ui-components/side-navigation/tsconfig.spec.json",
+            "setupFile": "libs/ui-components/side-navigation/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "ui-components-status-list": {
+      "projectType": "library",
+      "root": "libs/ui-components/status-list",
+      "sourceRoot": "libs/ui-components/status-list/src",
+      "prefix": "ngrx-beta-app",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-components/status-list/tsconfig.lib.json",
+              "libs/ui-components/status-list/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/ui-components/status-list/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ui-components/status-list/jest.config.js",
+            "tsConfig": "libs/ui-components/status-list/tsconfig.spec.json",
+            "setupFile": "libs/ui-components/status-list/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "ui-components-text-list": {
+      "projectType": "library",
+      "root": "libs/ui-components/text-list",
+      "sourceRoot": "libs/ui-components/text-list/src",
+      "prefix": "ngrx-beta-app",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-components/text-list/tsconfig.lib.json",
+              "libs/ui-components/text-list/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/ui-components/text-list/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ui-components/text-list/jest.config.js",
+            "tsConfig": "libs/ui-components/text-list/tsconfig.spec.json",
+            "setupFile": "libs/ui-components/text-list/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "ui-components-value-callout": {
+      "projectType": "library",
+      "root": "libs/ui-components/value-callout",
+      "sourceRoot": "libs/ui-components/value-callout/src",
+      "prefix": "ngrx-beta-app",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-components/value-callout/tsconfig.lib.json",
+              "libs/ui-components/value-callout/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/ui-components/value-callout/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ui-components/value-callout/jest.config.js",
+            "tsConfig": "libs/ui-components/value-callout/tsconfig.spec.json",
+            "setupFile": "libs/ui-components/value-callout/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "ui-components-value-list": {
+      "projectType": "library",
+      "root": "libs/ui-components/value-list",
+      "sourceRoot": "libs/ui-components/value-list/src",
+      "prefix": "ngrx-beta-app",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-components/value-list/tsconfig.lib.json",
+              "libs/ui-components/value-list/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/ui-components/value-list/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ui-components/value-list/jest.config.js",
+            "tsConfig": "libs/ui-components/value-list/tsconfig.spec.json",
+            "setupFile": "libs/ui-components/value-list/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "ui-components-widget": {
+      "projectType": "library",
+      "root": "libs/ui-components/widget",
+      "sourceRoot": "libs/ui-components/widget/src",
+      "prefix": "ngrx-beta-app",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-components/widget/tsconfig.lib.json",
+              "libs/ui-components/widget/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/ui-components/widget/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ui-components/widget/jest.config.js",
+            "tsConfig": "libs/ui-components/widget/tsconfig.spec.json",
+            "setupFile": "libs/ui-components/widget/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {
@@ -300,7 +879,8 @@
       "typescriptMismatch": false,
       "versionMismatch": false
     },
-    "defaultCollection": "@nrwl/angular"
+    "defaultCollection": "@nrwl/angular",
+    "analytics": false
   },
   "schematics": {
     "@nrwl/angular:application": {
@@ -311,5 +891,5 @@
       "unitTestRunner": "jest"
     }
   },
-  "defaultProject": "ngrx-workshop-app"
+  "defaultProject": "ngrx-beta-app"
 }

@@ -1,0 +1,24 @@
+@import '../../../../../styles/_framework';
+
+.lw-text-list {
+	font-family: $font-family-primary;
+	font-size: 1.6rem;
+	line-height: 1.5;
+	color: #153C3F;
+	display: block;
+	margin-bottom: 5rem;
+
+	a {
+		color: #153C3F;
+	}
+}
+
+.lw-text-list-title {
+	display: block;
+	color: #153C3F;
+	font-size: 2rem;
+	font-family: $font-family-primary;
+	letter-spacing: 0.016rem;
+	line-height: 3rem;
+	margin-bottom: 3.2rem;
+}

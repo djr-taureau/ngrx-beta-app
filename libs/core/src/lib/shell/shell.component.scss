@@ -1,0 +1,18 @@
+@import '../../../../styles/_framework';
+:host {
+	display: grid;
+    grid-template-columns: 30rem auto;
+
+    background-color: $bg-color-grey;
+	background: url('/assets/accents/topo.svg');
+    background-size: 919px 1039px;
+    background-repeat: no-repeat;
+    background-position-x: 64%;
+    background-position-y: 335px;
+}
+
+.shell-top {
+    grid-row: 1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}

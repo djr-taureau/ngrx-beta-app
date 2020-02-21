@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Product } from '@ngrx-workshop-app/api-interface';
+import { Product } from '@ngrx-beta-app/api-interface';
 import { mockProducts } from './mocks/products';
 
 @Injectable()

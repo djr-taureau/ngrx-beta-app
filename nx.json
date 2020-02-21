@@ -1,5 +1,5 @@
 {
-  "npmScope": "ngrx-workshop-app",
+  "npmScope": "ngrx-beta-app",
   "implicitDependencies": {
     "angular.json": "*",
     "package.json": "*",
@@ -8,11 +8,11 @@
     "nx.json": "*"
   },
   "projects": {
-    "ngrx-workshop-app-e2e": {
+    "ngrx-beta-app-e2e": {
       "tags": [],
-      "implicitDependencies": ["ngrx-workshop-app"]
+      "implicitDependencies": ["ngrx-beta-app"]
     },
-    "ngrx-workshop-app": {
+    "ngrx-beta-app": {
       "tags": []
     },
     "api": {
@@ -28,6 +28,60 @@
       "tags": []
     },
     "shipping-data-access": {
+      "tags": []
+    },
+    "core": {
+      "tags": []
+    },
+    "common": {
+      "tags": []
+    },
+    "ui-components-buttons": {
+      "tags": []
+    },
+    "ui-components-attachment": {
+      "tags": []
+    },
+    "ui-components-breadcrumb": {
+      "tags": []
+    },
+    "ui-components-core": {
+      "tags": []
+    },
+    "ui-components-data-list": {
+      "tags": []
+    },
+    "ui-components-file-upload": {
+      "tags": []
+    },
+    "ui-components-icons": {
+      "tags": []
+    },
+    "ui-components-layouts": {
+      "tags": []
+    },
+    "ui-components-page-layouts": {
+      "tags": []
+    },
+    "ui-components-page-navigation": {
+      "tags": []
+    },
+    "ui-components-side-navigation": {
+      "tags": []
+    },
+    "ui-components-status-list": {
+      "tags": []
+    },
+    "ui-components-text-list": {
+      "tags": []
+    },
+    "ui-components-value-callout": {
+      "tags": []
+    },
+    "ui-components-value-list": {
+      "tags": []
+    },
+    "ui-components-widget": {
       "tags": []
     }
   }

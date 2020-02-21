@@ -1,5 +1,5 @@
 import { Test } from '@nestjs/testing';
-import { Product } from '@ngrx-workshop-app/api-interface';
+import { Product } from '@ngrx-beta-app/api-interface';
 import { ProductService } from './product.service';
 
 describe('ProductService', () => {

@@ -1,0 +1,7 @@
+<h5 class="h5">Choose Your Goals</h5>
+<p>Drag goals to timeline</p>
+<ul class="goals-list">
+  <li *ngFor="let goal of icons | keyvalue" draggable="true" [attr.data-goal]="goal.key" class="draggable goals-list-item">
+    <img class="goals-list-item-icon" draggable="false" src="{{goal.value.image}}">{{goal.value.label}}
+  </li>
+</ul>

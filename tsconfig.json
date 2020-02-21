@@ -16,17 +16,66 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@ngrx-workshop-app/api-interface": ["libs/api-interface/src/index.ts"],
-      "@ngrx-workshop-app/cart-data-access": [
-        "libs/cart-data-access/src/index.ts"
-      ],
-      "@ngrx-workshop-app/product-data-access": [
+      "@ngrx-beta-app/api-interface": ["libs/api-interface/src/index.ts"],
+      "@ngrx-beta-app/cart-data-access": ["libs/cart-data-access/src/index.ts"],
+      "@ngrx-beta-app/product-data-access": [
         "libs/product-data-access/src/index.ts"
       ],
-      "@ngrx-workshop-app/shipping-data-access": [
+      "@ngrx-beta-app/shipping-data-access": [
         "libs/shipping-data-access/src/index.ts"
       ],
-      "@ngrx-workshop-app/*": ["apps/ngrx-workshop-app/src/app/*"]
+      "@ngrx-beta-app/*": ["apps/ngrx-beta-app/src/app/*"],
+      "@ngrx-beta-app/core": ["libs/core/src/index.ts"],
+      "@ngrx-beta-app/common": ["libs/common/src/index.ts"],
+      "@ngrx-beta-app/common/nav": ["libs/common/src/lib/"],
+      "@ngrx-beta-app/ui-components/buttons": [
+        "libs/ui-components/buttons/src/index.ts"
+      ],
+      "@ngrx-beta-app/ui-components/attachment": [
+        "libs/ui-components/attachment/src/index.ts"
+      ],
+      "@ngrx-beta-app/ui-components/breadcrumb": [
+        "libs/ui-components/breadcrumb/src/index.ts"
+      ],
+      "@ngrx-beta-app/ui-components/core": [
+        "libs/ui-components/core/src/index.ts"
+      ],
+      "@ngrx-beta-app/ui-components/data-list": [
+        "libs/ui-components/data-list/src/index.ts"
+      ],
+      "@ngrx-beta-app/ui-components/file-upload": [
+        "libs/ui-components/file-upload/src/index.ts"
+      ],
+      "@ngrx-beta-app/ui-components/icons": [
+        "libs/ui-components/icons/src/index.ts"
+      ],
+      "@ngrx-beta-app/ui-components/layouts": [
+        "libs/ui-components/layouts/src/index.ts"
+      ],
+      "@ngrx-beta-app/ui-components/page-layouts": [
+        "libs/ui-components/page-layouts/src/index.ts"
+      ],
+      "@ngrx-beta-app/ui-components/page-navigation": [
+        "libs/ui-components/page-navigation/src/index.ts"
+      ],
+      "@ngrx-beta-app/ui-components/side-navigation": [
+        "libs/ui-components/side-navigation/src/index.ts"
+      ],
+      "@ngrx-beta-app/ui-components/status-list": [
+        "libs/ui-components/status-list/src/index.ts"
+      ],
+      "@ngrx-beta-app/ui-components/text-list": [
+        "libs/ui-components/text-list/src/index.ts"
+      ],
+      "@ngrx-beta-app/ui-components/value-callout": [
+        "libs/ui-components/value-callout/src/index.ts"
+      ],
+      "@ngrx-beta-app/ui-components/value-list": [
+        "libs/ui-components/value-list/src/index.ts"
+      ],
+      "@ngrx-beta-app/ui-components/widget": [
+        "libs/ui-components/widget/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

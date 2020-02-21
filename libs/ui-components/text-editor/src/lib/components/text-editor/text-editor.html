@@ -1,0 +1,8 @@
+<div class="vertical-container">
+  <div class="content-container">
+    <div class="quill-editor" [quill]="config" [modules]="modules" [disabled]="disabled"
+      (blur)="onEditorBlur($event)" (focus)="onEditorFocus($event)" (editorCreate)="onEditorCreate($event)"
+      (contentChange)="onContentChange($event)" (selectionChange)="onSelectionChange($event)">
+      </div>
+    </div>
+  </div>

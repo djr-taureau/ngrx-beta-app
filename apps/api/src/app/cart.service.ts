@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Item } from '@ngrx-workshop-app/api-interface';
+import { Item } from '@ngrx-beta-app/api-interface';
 
 @Injectable()
 export class CartService {

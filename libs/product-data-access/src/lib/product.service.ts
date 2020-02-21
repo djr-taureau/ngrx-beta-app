@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Product } from '@ngrx-workshop-app/api-interface';
+import { Product } from '@ngrx-beta-app/api-interface';
 import { Observable } from 'rxjs';
 
 @Injectable({

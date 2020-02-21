@@ -2,6 +2,6 @@
   "extends": "../../tslint.json",
   "rules": {
     "directive-selector": [true, "attribute", "ngrxWorkshopApp", "camelCase"],
-    "component-selector": [true, "element", "ngrx-workshop-app", "kebab-case"]
+    "component-selector": [true, "element", "ngrx-beta-app", "kebab-case"]
   }
 }

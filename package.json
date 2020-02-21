@@ -1,5 +1,5 @@
 {
-  "name": "ngrx-workshop-app",
+  "name": "ngrx-beta-app",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -48,7 +48,10 @@
     "@ngrx/router-store": "9.0.0-beta.0",
     "@ngrx/store": "9.0.0-beta.0",
     "@nrwl/angular": "9.0.0-rc.1",
+    "@types/ramda": "^0.26.41",
     "core-js": "^2.5.4",
+    "node-sass": "^4.13.1",
+    "ramda": "^0.27.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",

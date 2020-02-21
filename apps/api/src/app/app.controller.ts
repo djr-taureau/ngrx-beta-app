@@ -3,7 +3,7 @@ import {
   Product,
   ShippingMethod,
   Item
-} from '@ngrx-workshop-app/api-interface';
+} from '@ngrx-beta-app/api-interface';
 import { CartService } from './cart.service';
 import { ProductService } from './product.service';
 import { ShippingService } from './shipping.service';

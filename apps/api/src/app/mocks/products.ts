@@ -1,4 +1,4 @@
-import { Product } from '@ngrx-workshop-app/api-interface';
+import { Product } from '@ngrx-beta-app/api-interface';
 
 export const mockProducts: Product[] = [
   {

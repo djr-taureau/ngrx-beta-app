@@ -1,0 +1,57 @@
+@import '../../../../../styles/_framework';
+
+:host() {
+	display: block;
+}
+
+.drop-detector {
+	height: 400px;
+
+	position: relative;
+}
+
+.dragdetection {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.chart {
+	div:last-child {
+		opacity: 0;
+	}
+}
+
+.tooltip {
+	position: absolute;
+	padding: 6px;
+	background-color: #000;
+	color: #fff;
+	font-size: 12px;
+	transform: translateX(-50%) translateY(-50px);
+	border-radius: 3px;
+	// display: none;
+}
+
+.zoom-control-container {
+	.zoom-control-label,
+	.zoom-control {
+		margin-right: 1.2rem;
+		font-size: 1.4rem;
+	}
+	.zoom-control {
+		background-image: linear-gradient(-180deg, #eef0f1 0%, #d8dddf 100%);
+		border: 0.1rem solid #a3b5b7;
+		font-size: 1.4rem;
+		font-family: $font-family-primary;
+		width: 4rem;
+		padding: 0.3rem 0;
+		&:hover {
+			cursor: pointer;
+			background-image: none;
+			background-color: #d8dddf;
+		}
+	}
+}

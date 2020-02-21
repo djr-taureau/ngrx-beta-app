@@ -1,5 +1,5 @@
 import { Test } from '@nestjs/testing';
-import { ShippingMethod } from '@ngrx-workshop-app/api-interface';
+import { ShippingMethod } from '@ngrx-beta-app/api-interface';
 import { ShippingService } from './shipping.service';
 
 describe('ShippingService', () => {

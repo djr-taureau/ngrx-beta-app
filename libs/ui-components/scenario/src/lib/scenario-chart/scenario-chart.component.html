@@ -1,0 +1,16 @@
+<div class="zoom-control-container">
+  <label class="zoom-control-label">Zoom</label>
+  <button class="zoom-control" attr.data-zoom-amount="1" (click)="zoomClickHandler($event)">1y</button>
+  <button class="zoom-control" [attr.data-zoom-amount]="5" (click)="zoomClickHandler($event)">5y</button>
+  <button class="zoom-control" [attr.data-zoom-amount]="10" (click)="zoomClickHandler($event)">10y</button>
+  <button class="zoom-control" [attr.data-zoom-amount]="50" (click)="zoomClickHandler($event)">50y</button>
+  <button class="zoom-control" [attr.data-zoom-key]="'fit'" (click)="zoomClickHandler($event)">Fit</button>
+  <button class="zoom-control" [attr.data-zoom-key]="'zoomin'" (click)="zoomClickHandler($event)">+</button>
+  <button class="zoom-control" [attr.data-zoom-key]="'zoomout'" (click)="zoomClickHandler($event)">-</button>
+</div>
+<div class="drop-detector" draggable="true">
+  <div echarts [options]="chartOption" class="chart" (chartInit)="onChartInit($event)" [merge]="updateData"></div>
+  <div class="tooltip tooltip-date" [ngStyle]="{'left': tooltipLeft, 'top': tooltipTop, 'opacity': tooltipOpacity}"
+    *ngIf="showTooltip" innerHTML="{{tooltipContent}}">
+  </div>
+</div>

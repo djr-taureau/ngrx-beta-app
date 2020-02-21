@@ -1,0 +1,13 @@
+<lw-status-list-item *ngFor="let statusListItem of _data; let i = index" [tabindex]="i === 0 ? 0 : -1" [location]="statusListItem.location">
+    <lw-status-list-collapsible *ngIf="statusListItem.children" (click)="clickToggleExpand($event, statusListItem)"
+        [collapsed]="statusListItem.collapsed">
+    </lw-status-list-collapsible>
+    {{statusListItem.display}}
+    <lw-status-list-status [status]="statusListItem.status">
+    </lw-status-list-status>
+    <ng-container *ngIf="statusListItem.children && !statusListItem.collapsed" class="lw-status-list-items">
+        <lw-status-list [data]="statusListItem.children">
+        </lw-status-list>
+    </ng-container>
+</lw-status-list-item>
+<ng-content></ng-content>

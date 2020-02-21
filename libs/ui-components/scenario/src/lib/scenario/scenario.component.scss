@@ -1,0 +1,31 @@
+@import '../../../../../styles/_framework';
+
+$goals-width: 25rem;
+
+.chart-container {
+	float: left;
+	width: calc(100% - #{$goals-width});
+}
+
+.scenarios-container {
+	width: 100%;
+	position: relative;
+	overflow: auto;
+}
+
+.goals-list-container {
+	width: $goals-width;
+	background-color: #edf1f2;
+	border-left: 0.1rem solid #d8dddf;
+	float: left;
+	box-sizing: border-box;
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.data-area-placeholder {
+	height: 300px;
+	background-color: #f1f1f1;
+}

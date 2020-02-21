@@ -1,0 +1,29 @@
+<lw-side-nav>
+  <lw-navigation-logo></lw-navigation-logo>
+  <lw-navigation-search></lw-navigation-search>
+  <lw-navigation-group *ngFor="let navGroup of navigation">
+    <lw-navigation-title *ngIf="navGroup.display">{{navGroup.display}}</lw-navigation-title>
+    <lw-navigation-item [ngClass]="navItem.cssClass"  (event)="raiseEvent($event, navItem.action || 'click')" [location]="navItem.location" [action]="navItem.action"
+      *ngFor="let navItem of navGroup.children" [icon]="navItem.icon">
+        {{navItem.display}}
+        <span class="spacer"></span>
+      <ng-container menu-vert *ngIf="navItem.children">
+          <span class="spacer"></span>
+          <button button-vert mat-icon-button [matMenuTriggerFor]="menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" [overlapTrigger]="false">
+            <ng-container *ngFor="let navItem of navItem.children">
+              <button vert-menu-item mat-menu-item (click)="raiseEvent($event, navItem.action || 'click')">
+                <mat-icon>{{ navItem.icon }}</mat-icon>
+                {{ navItem.display }}
+              </button>
+            </ng-container>
+            </mat-menu>
+          </ng-container>
+    </lw-navigation-item>
+  </lw-navigation-group>
+</lw-side-nav>
+
+
+

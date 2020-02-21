@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { ShippingMethod } from '@ngrx-workshop-app/api-interface';
+import { ShippingMethod } from '@ngrx-beta-app/api-interface';
 import { mockShippingMethods } from './mocks/shipping-methods';
 
 @Injectable()

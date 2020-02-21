@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ShippingMethod } from '@ngrx-workshop-app/api-interface';
+import { ShippingMethod } from '@ngrx-beta-app/api-interface';
 import { Observable } from 'rxjs';
 
 @Injectable({
